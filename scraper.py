@@ -1,8 +1,8 @@
-import pandas as pd
-import requests
+from datetime import datetime
 from io import StringIO
 from pathlib import Path
-from datetime import datetime
+import pandas as pd
+import requests
 
 URL = "https://dse.co.tz/"
 FILE = "ohlcv.csv"
@@ -28,11 +28,9 @@ def clean_data(df):
 
 
 def main():
-
     # Get DSE website
     response = requests.get(URL, timeout=30)
     response.raise_for_status()
-
     # Read tables from website
     tables = pd.read_html(StringIO(response.text))
 
