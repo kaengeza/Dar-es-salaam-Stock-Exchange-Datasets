@@ -1,4 +1,4 @@
-name: Update DSE Data
+name: Collecting Dar es salaam Stock Exchange Market Data
 
 on:
   schedule:
@@ -27,7 +27,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Download DSE data
+      - name: Download Dar es salaam Stock Exchange data
         run: |
           python main.py
 
@@ -38,6 +38,6 @@ jobs:
 
           git add dataset/cleaned.csv
 
-          git diff --cached --quiet || git commit -m "Update DSE market data"
+          git diff --cached --quiet || git commit -m "Update Dar es salaam Stock Exchange Market Data"
 
           git push
