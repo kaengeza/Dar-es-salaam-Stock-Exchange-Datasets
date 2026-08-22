@@ -9,5 +9,5 @@
 ![Exchange](https://img.shields.io/badge/Exchange-DSE%20Tanzania-FFB300?style=flat-square)
 </div>
 
-<p align="center">This repository contains code for fetching and collecting datasets from the Dar es Salaam Stock Exchange (DSE), Tanzania. The datasets and code are intended **for personal use and independent research purposes only**.
+<p align="center">This repository contains code for fetching and collecting datasets from the Dar es Salaam Stock Exchange (DSE), Tanzania. The datasets and code are intended <b><i>for personal use and independent research purposes only</i></b>.
 </p>
