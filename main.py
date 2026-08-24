@@ -18,6 +18,8 @@ def main(filepath = "dataset/cleaned.csv"):
                           )
     
     combined.to_csv(filepath, index=False)
+    combined.to_csv("dataset/ohlcv.csv", index=False)
+    
     
 if __name__ == "__main__":
     main()
