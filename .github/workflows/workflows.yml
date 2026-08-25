@@ -29,14 +29,14 @@ jobs:
 
       - name: Download Dar es salaam Stock Exchange data
         run: |
-          python main.py
+          python scraper.py
 
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add dataset/cleaned.csv
+          git add ohlcv.csv
 
           git diff --cached --quiet || git commit -m "Update Dar es salaam Stock Exchange Market Data"
 
