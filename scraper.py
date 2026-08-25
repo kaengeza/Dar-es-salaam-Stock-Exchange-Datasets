@@ -81,12 +81,13 @@ def main():
 
     # Clean new data
     new_data = clean_data(new_data)
+    new_data= cleaning.cleaner(new_data)
+    
 
     # Load existing CSV
     existing_data = load_existing_data()
+    existing_data = cleaning.cleaner(existing_data)
 
-    if not existing_data.empty:
-        existing_data = clean_data(existing_data)
 
     # Combine
     combined = pd.concat(
@@ -98,14 +99,14 @@ def main():
     combined = (
         combined
         .drop_duplicates(
-            subset=["Date", "Symbol"],
+            subset=["date", "ticker"],
             keep="last"
         )
-        .sort_values(["Date", "Symbol"])
+        .sort_values(["date", "ticker)
         .reset_index(drop=True)
     )
 
-    combined= cleaning.cleaner(combined)
+    
 
     # Save
     combined.to_csv(FILE, index=False)
