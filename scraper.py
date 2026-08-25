@@ -102,7 +102,7 @@ def main():
             subset=["date", "ticker"],
             keep="last"
         )
-        .sort_values(["date", "ticker")
+        .sort_values(["date", "ticker"])
         .reset_index(drop=True)
     )
 
