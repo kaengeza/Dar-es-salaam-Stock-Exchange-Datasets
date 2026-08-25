@@ -80,7 +80,7 @@ def main():
     new_data["Date"] = today
 
     # Clean new data
-    new_data = clean_data(new_data)
+    #new_data = clean_data(new_data)
     new_data= cleaning.cleaner(new_data)
     
 
