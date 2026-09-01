@@ -1,8 +1,9 @@
-name: Collecting Dar es salaam Stock Exchange Market Data
+name: Collecting Dar es Salaam Stock Exchange Market Data
 
 on:
   schedule:
-    - cron: "0 18 * * 1-5"
+    # 18:00 Tanzania time (UTC+3), Monday-Friday
+    - cron: "36 19 * * 1-5"
 
   workflow_dispatch:
 
@@ -25,11 +26,17 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
 
-      - name: Download Dar es salaam Stock Exchange data
+      - name: Collect DSE market data
         run: |
           python main.py
+
+      - name: Check generated data
+        run: |
+          ls -lh
+          test -f ohlcv.csv
 
       - name: Commit updated data
         run: |
@@ -38,6 +45,9 @@ jobs:
 
           git add ohlcv.csv
 
-          git diff --cached --quiet || git commit -m "Update Dar es salaam Stock Exchange Market Data"
-
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update DSE Market Data"
+            git push
+          fi
