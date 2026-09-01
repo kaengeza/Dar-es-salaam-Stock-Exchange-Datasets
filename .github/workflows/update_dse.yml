@@ -3,8 +3,10 @@ name: Collecting Dar es Salaam Stock Exchange Market Data
 on:
   schedule:
     # 18:00 Tanzania time (UTC+3), Monday-Friday
-    - cron: "38 19 * * 1-5"
+    - cron: "48 22 * * 1-5"
+      timezone: "Africa/Dar_es_Salaam"
 
+  workflow_dispatch:
   workflow_dispatch:
 
 permissions:
