@@ -29,7 +29,7 @@ jobs:
 
       - name: Download Dar es salaam Stock Exchange data
         run: |
-          python dse_scraper.py
+          python main.py
 
       - name: Commit updated data
         run: |
