@@ -7,7 +7,6 @@ on:
       timezone: "Africa/Dar_es_Salaam"
 
   workflow_dispatch:
-  workflow_dispatch:
 
 permissions:
   contents: write
