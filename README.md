@@ -12,6 +12,8 @@
 <p align="center">This repository contains code for fetching and collecting datasets from the Dar es Salaam Stock Exchange (DSE), Tanzania. The datasets and code are intended <b><i>for personal use and independent research purposes only</i></b>.
 </p>
 
+<hr>
+
 <p align="center">
   <img src="resources/dse.png" alt="DSE Data Pipeline" width="800">
 </p>
