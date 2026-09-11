@@ -1,4 +1,4 @@
-<h1 align='center'>Dar es Salaam Stock Exchange (DSE)  Datasets</h1>
+<h1 align='center'>Local Stock Exchange (DSE)  Datasets</h1>
 
 <div align='center'>
   
